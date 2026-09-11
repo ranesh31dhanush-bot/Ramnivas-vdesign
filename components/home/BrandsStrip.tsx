@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FadeIn } from "@/components/shared/FadeIn";
 import { Section, SectionHeader } from "@/components/shared/Section";
 import { project } from "@/lib/data";
@@ -12,14 +13,29 @@ export function BrandsStrip() {
       />
 
       <FadeIn>
-        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:gap-6">
           {project.brands.map((brand) => (
-            <span
+            <div
               key={brand.name}
-              className="rounded-sm border border-navy/10 bg-white px-5 py-3 text-base font-medium text-charcoal/80 transition-colors hover:border-accent/30 hover:text-navy"
+              className="group flex h-20 items-center justify-center rounded-sm border border-navy/10 bg-white px-4 py-3 shadow-xs transition-all duration-300 hover:border-accent/40 hover:shadow-soft"
+              title={brand.name}
             >
-              {brand.name}
-            </span>
+              {brand.logo ? (
+                <div className="relative flex h-full w-full items-center justify-center">
+                  <Image
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    width={140}
+                    height={48}
+                    className="max-h-10 w-auto max-w-[85%] object-contain transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              ) : (
+                <span className="text-sm font-medium text-charcoal/80 transition-colors group-hover:text-navy">
+                  {brand.name}
+                </span>
+              )}
+            </div>
           ))}
         </div>
       </FadeIn>

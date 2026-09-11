@@ -47,8 +47,8 @@ export default function AmenitiesPage() {
           {project.amenities.map((amenity, index) => {
             const Icon = iconMap[amenity.icon as keyof typeof iconMap] ?? Car;
             return (
-              <FadeIn key={amenity.id} delay={index * 0.08}>
-                <article className="flex gap-6 rounded-sm border border-navy/10 p-8 transition-shadow hover:shadow-soft">
+              <FadeIn key={amenity.id} delay={index * 0.08} className="h-full">
+                <article className="flex h-full gap-6 rounded-sm border border-navy/10 p-8 transition-shadow hover:shadow-soft">
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-sm bg-accent/10">
                     <Icon size={26} className="text-accent" aria-hidden />
                   </div>

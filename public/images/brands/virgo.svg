@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <defs>
+    <!-- 3D Gold Pyramid Gradients -->
+    <linearGradient id="gold-left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C158" />
+      <stop offset="50%" stop-color="#C59B27" />
+      <stop offset="100%" stop-color="#8E6A10" />
+    </linearGradient>
+    <linearGradient id="gold-right" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDF0A6" />
+      <stop offset="60%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#997314" />
+    </linearGradient>
+    <linearGradient id="gold-bottom" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8E6A10" />
+      <stop offset="50%" stop-color="#B8860B" />
+      <stop offset="100%" stop-color="#E5C158" />
+    </linearGradient>
+    <linearGradient id="gold-inner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6B4E08" />
+      <stop offset="100%" stop-color="#4A3402" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="1" dy="2" stdDeviation="1.5" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- 3D Triangular Pyramid Emblem -->
+  <g transform="translate(10, 6)" filter="url(#shadow)">
+    <!-- Base Outer Triangle Frame -->
+    <!-- Top vertex: 24, 2 | Bottom Left: 2, 44 | Bottom Right: 46, 44 | Center Inner: 24, 28 -->
+    
+    <!-- Left Face Strut -->
+    <path d="M 24,2 L 28,5 L 11,40 L 2,44 Z" fill="url(#gold-left)" />
+    
+    <!-- Right Face Strut -->
+    <path d="M 24,2 L 46,44 L 37,40 L 20,5 Z" fill="url(#gold-right)" />
+    
+    <!-- Bottom Face Strut -->
+    <path d="M 2,44 L 46,44 L 39,37 L 9,37 Z" fill="url(#gold-bottom)" />
+    
+    <!-- Center Node to Vertices (3D Tetrahedral Inset) -->
+    <path d="M 24,2 L 25,27 L 2,44 Z" fill="url(#gold-left)" opacity="0.85" />
+    <path d="M 24,2 L 46,44 L 25,27 Z" fill="url(#gold-right)" opacity="0.9" />
+    <path d="M 2,44 L 46,44 L 25,27 Z" fill="url(#gold-inner)" opacity="0.75" />
+    
+    <!-- Front Highlights for Crisp 3D Bevel -->
+    <path d="M 24,2 L 25,27" stroke="#FFF5B8" stroke-width="1.2" stroke-linecap="round" />
+    <path d="M 25,27 L 2,44" stroke="#8E6A10" stroke-width="1" />
+    <path d="M 25,27 L 46,44" stroke="#D4AF37" stroke-width="1" />
+    <polygon points="24,2 25,5 23,5" fill="#FFFFFF" opacity="0.8" />
+  </g>
+
+  <!-- Brand Typography in Crisp Navy -->
+  <g transform="translate(70, 0)">
+    <!-- VIRGO wordmark -->
+    <text x="0" y="36" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="28" letter-spacing="3.5" fill="#1C2B3A">VIRGO</text>
+    <!-- Subtitle -->
+    <text x="1.5" y="49" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="8.5" letter-spacing="4" fill="#C59B27">LAMINATES</text>
+  </g>
+</svg>

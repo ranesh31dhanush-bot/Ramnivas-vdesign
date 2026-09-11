@@ -31,8 +31,8 @@ export function QuickFacts() {
     <Section background="white">
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {facts.map((fact, index) => (
-          <FadeIn key={fact.label} delay={index * 0.08}>
-            <div className="rounded-sm border border-navy/10 bg-cream p-6 transition-shadow hover:shadow-soft">
+          <FadeIn key={fact.label} delay={index * 0.08} className="h-full">
+            <div className="flex h-full flex-col rounded-sm border border-navy/10 bg-cream p-6 transition-shadow hover:shadow-soft">
               <fact.icon
                 size={24}
                 className="text-accent"

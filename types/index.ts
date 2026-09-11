@@ -23,6 +23,7 @@ export interface Amenity {
 
 export interface Brand {
   name: string;
+  logo?: string;
 }
 
 export interface ContactInfo {

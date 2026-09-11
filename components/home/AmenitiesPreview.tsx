@@ -29,8 +29,8 @@ export function AmenitiesPreview() {
         {project.amenities.map((amenity, index) => {
           const Icon = iconMap[amenity.icon as keyof typeof iconMap] ?? Car;
           return (
-            <FadeIn key={amenity.id} delay={index * 0.08}>
-              <div className="flex gap-4 rounded-sm border border-navy/10 p-6">
+            <FadeIn key={amenity.id} delay={index * 0.08} className="h-full">
+              <div className="flex h-full gap-4 rounded-sm border border-navy/10 p-6">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-sm bg-navy/5">
                   <Icon size={22} className="text-accent" aria-hidden />
                 </div>

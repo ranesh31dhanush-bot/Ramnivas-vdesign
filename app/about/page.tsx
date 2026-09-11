@@ -63,8 +63,8 @@ export default function AboutPage() {
 
         <div className="grid gap-8 md:grid-cols-3">
           {project.about.values.map((value, index) => (
-            <FadeIn key={value.title} delay={index * 0.1}>
-              <div className="rounded-sm border border-navy/10 bg-white p-8 text-center">
+            <FadeIn key={value.title} delay={index * 0.1} className="h-full">
+              <div className="flex h-full flex-col rounded-sm border border-navy/10 bg-white p-8 text-center">
                 <h3 className="font-serif text-xl text-navy">{value.title}</h3>
                 <p className="mt-3 text-base text-charcoal/75">{value.description}</p>
               </div>
